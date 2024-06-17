@@ -1,3 +1,5 @@
+package GerenciamentoBiblioteca;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,18 +17,18 @@ public class Biblioteca {
     public void emprestarLivro(Livro livro){
         if(livro.isDisponivel()){
             livro.setDisponivel(false);
-            System.out.println("Livro emprestado: " + livro.getTitulo());
+            System.out.println("GerenciamentoBiblioteca.Livro emprestado: " + livro.getTitulo());
         }else{
-            System.out.println("Livro " + livro.getTitulo() + " não está disponível para empréstimo");
+            System.out.println("GerenciamentoBiblioteca.Livro " + livro.getTitulo() + " não está disponível para empréstimo");
         }
     }
 
     public void devolverLivro(Livro livro){
         if(!livro.isDisponivel()){
             livro.setDisponivel(true);
-            System.out.println("Livro devolvido" + livro.getTitulo());
+            System.out.println("GerenciamentoBiblioteca.Livro devolvido" + livro.getTitulo());
         }else{
-            System.out.println("Livro " + livro.getTitulo() + " já está disponível para empréstimo.");
+            System.out.println("GerenciamentoBiblioteca.Livro " + livro.getTitulo() + " já está disponível para empréstimo.");
         }
     }
 
