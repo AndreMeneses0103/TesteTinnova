@@ -8,13 +8,14 @@ import java.util.List;
 public class Biblioteca {
     private List<Livro> acervo;
 
-    public Biblioteca(List<Livro> acervo) {
+    public Biblioteca() {
         this.acervo = new ArrayList<>();
     }
 
     public void adicionarLivro(Livro livro){
         Date dataAtual = new Date();
         livro.setDataAdicao(dataAtual);
+        livro.setDisponivel(true);
         acervo.add(livro);
     }
 
@@ -43,10 +44,8 @@ public class Biblioteca {
                 long diferencaMillis = dataAtual.getTime() - livro.getDataDevolucao().getTime();
                 long diferencaDias = diferencaMillis / (1000 * 60 * 60 * 24);
 
-                // Calcula a multa
-                double multa = diferencaDias * 5.0; // R$ 5 por dia de atraso
+                double multa = diferencaDias * 5.0;
 
-                // Exibe a mensagem com a multa
                 System.out.println("Livro devolvido com atraso de " + diferencaDias + " dias.");
                 System.out.println("Multa a ser paga: R$ " + multa);
             } else {

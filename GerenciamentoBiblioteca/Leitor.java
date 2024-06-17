@@ -7,7 +7,7 @@ public class Leitor {
     private String nome;
     private List<Livro> livrosEmprestados;
 
-    public Leitor(String nome, List<Livro> livrosEmprestados) {
+    public Leitor(String nome) {
         this.nome = nome;
         this.livrosEmprestados = new ArrayList<>();
     }
