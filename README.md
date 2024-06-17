@@ -37,14 +37,18 @@ Função devolverLivro(livro):
         Mostrar "Livro " + livro.título + " já está disponível para empréstimo."
 
 Função listarLivrosDisponiveis():
+    livrosDisponiveis ← lista vazia
     Para cada livro em acervo:
         Se livro.disponível então:
-            Mostrar "Título: " + livro.título + ", Autor: " + livro.autor
+            adicionar livro a livrosDisponiveis
+    retornar livrosDisponiveis
 
 Função listarLivrosIndisponiveis():
+    livrosIndisponiveis ← lista vazia
     Para cada livro em acervo:
         Se não livro.disponível então:
-            Mostrar "Título: " + livro.título + ", Autor: " + livro.autor
+            adicionar livro a livrosIndisponiveis
+    retornar livrosIndisponiveis
 
 Função procurarLivrosPorData(dataInicio):
     livrosEncontrados ← lista vazia
