@@ -1,12 +1,12 @@
 public class Livro {
     private String titulo;
     private String autor;
-    private boolean status;
+    private boolean disponivel;
 
-    public Livro(String titulo, String autor, boolean status) {
+    public Livro(String titulo, String autor, boolean disponivel) {
         this.titulo = titulo;
         this.autor = autor;
-        this.status = status;
+        this.disponivel = disponivel;
     }
 
     public String getTitulo() {
@@ -25,11 +25,11 @@ public class Livro {
         this.autor = autor;
     }
 
-    public boolean isStatus() {
-        return status;
+    public boolean isDisponivel() {
+        return disponivel;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
     }
 }
